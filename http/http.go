@@ -1,4 +1,5 @@
-package http                                                                                                                                                                                                   2
+package http
+
 import (
     "crypto/tls"
     "encoding/json"
