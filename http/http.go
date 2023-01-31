@@ -88,12 +88,10 @@ func toResponse(resp *http.Response, response Response) error {
     err = json.Unmarshal(b, response)
     logger.Debugf("response:%s", b)
     if err != nil {
-        logger.Errorf("parse json err:%v, json:%s", err, b)
         return err
     }
-    //log.Printf("re o:%v", response);
-    if !response.IsSuccess() {
-        logger.Debugf("response:%s", b)
+
+    if !response.IsSuccess() {        
         msg := response.GetMessage()
         if msg == "" {
             msg = "response:" + string(b)
