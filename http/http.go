@@ -48,7 +48,7 @@ type RequestConfig struct {
     AuthInfo
 }
 
- func CRequest(url, data string, config *RequestConfig, response Response) error {    
+func CRequest(url, data string, config *RequestConfig, response Response) error {
     if config.Method == "" {
         config.Method = "POST"
     }
